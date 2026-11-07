@@ -6,86 +6,9 @@ body {
     margin-top: 50px;
 }
 
-.resetalgs {
+.aboutsection {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-}
-
-#resetalgs {
-    background-color: darkblue;
-    color: white;
-    border-radius: 5px;
-    width: 200px;
-    height: 40px;
-    border: none;
-    cursor: pointer;
-}
-
-#resetalgs:hover {
-    background-color: #2563eb;
-}
-
-.resetalgsparagraph {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#algs {
-    font-size: 24px;
-    margin: 20px auto;
-    max-width: 600px;
-    word-spacing: 5px;
-}
-
-.timer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: monospace;
-    margin: 30px auto;
-    font-size: 150px; 
-}
-
-.ao5 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: monospace;
-    margin: 10px auto;
-    font-size: 20px; 
-}
-
-.ao12 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: monospace;
-    margin: 10px auto;
-    font-size: 20px; 
-}
-
-.about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-#aboutbutton {
-    background-color: #1e3a8a;
-    color: white;
-    border-radius: 6px;
-    width: 180px;
-    height: 40px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.2s ease;
-}
-
-#aboutbutton:hover {
-    background-color: #2563eb;
 }
