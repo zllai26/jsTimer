@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    
+    <div class="resetalgsparagraph">
+      <p id="algs"></p>
+    </div>
+    <div class="resetalgs">
+      <button id="resetalgs" onclick="refreshAlgs()">Give Me Another Scramble</button>
+    </div>
+
+    <label for="events">Choose an event: </label>
+
+    <select name="events" id="events">
+      <option value="2x2">2x2</option>
+      <option value="3x3">3x3</option>
+      <option value="4x4">4x4</option>
+      <option value="pyraminx">Pyraminx</option>
+    </select>
+
+    <div class="about">
+      <button id="aboutbutton" onclick="about()">About jsTimer</button>
+      <p id="abouttext"></p>
+    </div>
+
+    <div class="timer">
+      <p id="timertext">0.00</p>
+    </div>
+    
+    <div class="ao5">
+      <p id="ao5text">ao5: -.--</p>
+    </div>
+
+    <div class="ao12">
+      <p id="ao12text">ao12: -.--</p>
+    </div>
+
+    
+    
+    <script src="main.js"></script>
+  </body>
+</html>
