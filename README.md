@@ -1,9 +1,37 @@
-<h1>jsTimer</h1>
-<p>jsTimer is a no-nonsense minimalist cubing timer made entirely from JavaScript backend.</p><br>
-<p>You have ao5 and ao12, which calculates 5 solves and 12 solves and find your average. </p><br>
+# jsTimer
 
-<h2>How to use jsTimer?</h2>
-<p>Just click on the Hostinger link here : () to try it. </p>
+A no-nonsense, minimalist cube timer built with vanilla JavaScript, HTML and CSS.
 
-<h2>Issues?</h2>
-<p>You can e-mail me (on my homepage) or list down issues in the Issues section or PR into this main branch</p>
+![jsTimer screenshot](images/screenshots.png)
+
+## Features
+
+- **Clean, distraction-free timer** for speedcubing
+- **ao5**: the average of your last 5 solves
+- **ao12**: the average of your last 12 solves
+- Runs entirely in your browser
+
+## Try it
+
+**[Open jsTimer](https://your-hostinger-url-here)**
+
+## Run locally
+
+```bash
+git clone https://github.com/zllai26/jsTimer.git
+cd jsTimer
+```
+
+Then open `index.html` in your browser. No build step or dependencies needed.
+
+## Contributing and issues
+
+Found a bug or have an idea? You can:
+
+- Open an issue in the [Issues](https://github.com/zllai26/jsTimer/issues) tab
+- Submit a pull request to the `main` branch
+- Contact me via [my homepage](https://github.com/zllai26)
+
+## License
+
+Released under the [GPL-3.0 license](LICENSE).
