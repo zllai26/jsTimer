@@ -13,7 +13,7 @@ A no-nonsense, minimalist cube timer built with vanilla JavaScript, HTML and CSS
 
 ## Try it
 
-**[Open jsTimer](https://your-hostinger-url-here)**
+**[Open jsTimer](https://jstimer.lab26.my)**
 
 ## Run locally
 
