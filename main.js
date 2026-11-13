@@ -120,31 +120,38 @@ function stoptimer() {
     solvetracker++;
 
     switch (solvetracker) {
-        case 1: solve1 = time; break;
-        case 2: solve2 = time; break;
-        case 3: solve3 = time; break;
-        case 4: solve4 = time; break;
+        case 1: 
+            solve1 = time; document.getElementById('time1').innerHTML=(solve1.toFixed(2)); break;
+        case 2: solve2 = time; document.getElementById('time2').innerHTML=(solve2.toFixed(2)); break;
+        case 3: solve3= time; document.getElementById('time3').innerHTML=(solve3.toFixed(2)); break;
+        case 4: solve4 = time; document.getElementById('time4').innerHTML=(solve4.toFixed(2)); break;
         case 5: 
             solve5 = time;
             ao5 = (solve1 + solve2 + solve3 + solve4 + solve5) / 5;
             ao5text.innerHTML = "ao5: " + ao5.toFixed(2);
+            document.getElementById('time5').innerHTML=(solve5.toFixed(2));
+            document.getElementById('ao5th').innerHTML=(solve5.toFixed(2));
             break;
-        case 6: solve6 = time; break;
-        case 7: solve7 = time; break;
-        case 8: solve8 = time; break;
-        case 9: solve9 = time; break;
-        case 10: solve10 = time; break;
-        case 11: solve11 = time; break;
+        case 6: solve6 = time; document.getElementById('time6').innerHTML=(solve6.toFixed(2)); break;
+        case 7: solve7 = time; document.getElementById('time7').innerHTML=(solve7.toFixed(2)); break;
+        case 8: solve8 = time; document.getElementById('time8').innerHTML=(solve8.toFixed(2)); break;       
+        case 9: solve9 = time; document.getElementById('time9').innerHTML=(solve9.toFixed(2)); break;
+        case 10: solve10 = time; document.getElementById('time10').innerHTML=(solve10.toFixed(2)); break;
+        case 11: solve11 = time; document.getElementById('time11').innerHTML=(solve11.toFixed(2)); break;
         case 12: 
             solve12 = time;
             ao12 = (solve1 + solve2 + solve3 + solve4 + solve5 + solve6 + solve7 + solve8 + solve9 + solve10 + solve11 + solve12) / 12;
             ao12text.innerHTML = "ao12: " + ao12.toFixed(2);
+            document.getElementById('time12').innerHTML=(solve12.toFixed(2));
+            document.getElementById('ao12th').innerHTML=(solve12.toFixed(2));
             solvetracker = 0;
             break;
     }
 
     generateScramble(); 
 }
+
+
 
 window.addEventListener('keydown', (event) => {
     if (event.code === 'Space') {

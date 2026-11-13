@@ -1,9 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #4F4646;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     text-align: center;
-    margin-top: 50px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-layout {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left-sidebar {
+    width: 290px;
+    background-color: #3f3737;
+    border-right: 1px solid #635858;
+    padding: 25px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.event-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.event-box label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #e5e7eb;
+}
+
+#events {
+    width: 100%;
+    height: 38px;
+    padding: 0 10px;
+    background-color: #2f2929;
+    color: white;
+    border: 1px solid #635858;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+#events:hover,
+#events:focus {
+    border-color: #2563eb;
+}
+
+.table {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #362f2f;
+    border: 1px solid #635858;
+    border-radius: 6px;
+}
+
+.table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.table th {
+    padding: 8px 6px;
+    border-bottom: 1px solid #4F4646;
+    font-weight: normal;
+}
+
+.table tr:nth-child(even) {
+    background-color: #3d3535;
+}
+
+.table tr:hover:not(:first-child) {
+    background-color: #4a4141;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#aboutbutton {
+    background-color: #1e3a8a;
+    color: white;
+    border-radius: 6px;
+    width: 180px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+#aboutbutton:hover {
+    background-color: #2563eb;
+}
+
+#abouttext {
+    font-size: 13px;
+    color: #e5e7eb;
+    line-height: 1.4;
+}
+
+.main-stage {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    padding-inline: 24px;
+}
+
+.resetalgsparagraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#algs {
+    font-size: 24px;
+    margin: 15px auto;
+    max-width: 650px;
+    word-spacing: 5px;
+    min-height: 32px;
 }
 
 .resetalgs {
@@ -21,71 +157,39 @@ body {
     height: 40px;
     border: none;
     cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
 }
 
 #resetalgs:hover {
     background-color: #2563eb;
 }
 
-.resetalgsparagraph {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#algs {
-    font-size: 24px;
-    margin: 20px auto;
-    max-width: 600px;
-    word-spacing: 5px;
-}
-
 .timer {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: monospace;
-    margin: 30px auto;
-    font-size: 150px; 
+    font-size: 150px;
+    user-select: none;
 }
 
-.ao5 {
+.stats-group {
+    margin-bottom: 50px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: monospace;
-    margin: 10px auto;
-    font-size: 20px; 
+    gap: 30px;
 }
 
+.ao5,
 .ao12 {
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: monospace;
-    margin: 10px auto;
-    font-size: 20px; 
-}
-
-.about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-#aboutbutton {
-    background-color: #1e3a8a;
-    color: white;
-    border-radius: 6px;
-    width: 180px;
-    height: 40px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.2s ease;
-}
-
-#aboutbutton:hover {
-    background-color: #2563eb;
+    background-color: #3f3737;
+    border: 1px solid #635858;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 20px;
 }
