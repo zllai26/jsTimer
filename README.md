@@ -34,4 +34,4 @@ Found a bug or have an idea? You can:
 
 ## License
 
-Released under the [GPL-3.0 license](LICENSE).
+Released under the [GPL-2.0 license](LICENSE).
