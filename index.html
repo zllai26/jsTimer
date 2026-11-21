@@ -27,6 +27,7 @@
                 <th>solve</th>
                 <th>time</th>
                 <th>Avg (5/12)</th>
+                <th>Cube</th>
               </tr>
             </thead>
             <tbody>
@@ -34,61 +35,74 @@
                 <th>solve1</th>
                 <th id="time1">-</th>
                 <th>-</th>
+                <th id="cube1">-</th>
               </tr>
               <tr>
                 <th>solve2</th>
                 <th id="time2">-</th>
                 <th>-</th>
+                <th id="cube2">-</th>
+
               </tr>
               <tr>
                 <th>solve3</th>
                 <th id="time3">-</th>
                 <th>-</th>
+                <th id="cube3">-</th>
               </tr>
               <tr>
                 <th>solve4</th>
                 <th id="time4">-</th>
                 <th>-</th>
+                <th id="cube4">-</th>
               </tr>
               <tr>
                 <th>solve5</th>
                 <th id="time5">-</th>
                 <th id="ao5th">-</th>
+                <th id="cube5">-</th>
               </tr>
               <tr>
                 <th>solve6</th>
                 <th id="time6">-</th>
                 <th>-</th>
+                <th id="cube6">-</th>
               </tr>
               <tr>
                 <th>solve7</th>
                 <th id="time7">-</th>
                 <th>-</th>
+                <th id="cube7">-</th>
               </tr>
               <tr>
                 <th>solve8</th>
                 <th id="time8">-</th>
                 <th>-</th>
+                <th id="cube8">-</th>
               </tr>
               <tr>
                 <th>solve9</th>
                 <th id="time9">-</th>
                 <th>-</th>
+                <th id="cube9">-</th>
               </tr>
               <tr>
                 <th>solve10</th>
                 <th id="time10">-</th>
                 <th>-</th>
+                <th id="cube10">-</th>
               </tr>
               <tr>
                 <th>solve11</th>
                 <th id="time11">-</th>
                 <th>-</th>
+                <th id="cube11">-</th>
               </tr>
               <tr>
                 <th>solve12</th>
                 <th id="time12">-</th>
                 <th id="ao12th">-</th>
+                <th id="cube12">-</th>
               </tr>
             </tbody>
           </table>
@@ -106,8 +120,10 @@
             <p id="algs">R U R' U' F2 D L2 ...</p>
           </div>
           <div class="resetalgs">
-            <button id="resetalgs" onclick="refreshAlgs()">Give Me Another Scramble</button>
+            <button id="resetalgs" onclick="generateScramble()">Give Me Another Scramble</button>
           </div>
+          <label name="cubep" id="cubep">Your Cube:</label>
+          <input name="cube" id="cube">
         </header>
 
         <section class="timer-center">
