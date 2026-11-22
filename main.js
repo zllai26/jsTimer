@@ -4,6 +4,7 @@ const ao5text = document.getElementById("ao5text");
 const ao12text = document.getElementById("ao12text");
 const eventSelect = document.getElementById("events");
 const maincube = document.getElementById("cube");
+const mobilebutton = document.getElementById("mobile");
 
 const algs = [" L", " L'", " R", " R'", " U", " U'", " F", " F'", " D", " D'", " B", " B'", " L2", " R2", " F2", " D2", " U2", " B2"];
 const algs4x4 = [" L", " L'", " R", " R'", " U", " U'", " F", " F'", " D", " D'", " B", " B'", " L2", " R2", " F2", " D2", " U2", " B2", " Rw", " Lw", " Uw", " Dw", " Fw", " Bw", " Rw'", " Lw'", " Uw'", " Dw'", " Fw'", " Bw'", " Rw2", " Lw2", " Uw2", " Dw2", " Fw2", " Bw2"];
@@ -17,6 +18,34 @@ let solve1, solve2, solve3, solve4, solve5, solve6, solve7, solve8, solve9, solv
 let solvetracker = 0;
 let ao5 = 0;
 let ao12 = 0;
+
+function getDeviceCategory() {
+    const hasTouch = navigator.maxTouchPoints > 0;
+    const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
+    const hasNoHover = window.matchMedia('(hover: none)').matches;
+  
+    const minDimension = Math.min(window.screen.width, window.screen.height);
+
+    if (!hasTouch || (!isCoarsePointer && !hasNoHover)) {
+        return 'desktop';
+    }
+
+    if (minDimension < 600) {
+        return 'mobile';
+    }
+
+    return 'tablet';
+}
+
+if (getDeviceCategory() === 'desktop') {
+    console.log("computer");
+    mobilebutton.style.display = 'none';
+} 
+
+else {
+    console.log("mobile");
+    mobilebutton.style.display = '';
+}
 
 function generateScramble() {
     const selectedEvent = eventSelect.value;
@@ -214,14 +243,36 @@ window.addEventListener('keydown', (event) => {
         
         if (spacetrigger === 1) {
             inspection();
-        } else if (spacetrigger === 2) {
+        } 
+        
+        else if (spacetrigger === 2) {
             starttimer();
-        } else if (spacetrigger === 3) {
+        } 
+        
+        else if (spacetrigger === 3) {
             stoptimer();
             spacetrigger = 0;
         }
     }
 });
+
+function mobileevent() {
+    spacetrigger++;
+        
+    if (spacetrigger === 1) {
+        inspection();
+    } 
+    
+    else if (spacetrigger === 2) {
+        starttimer();
+    } 
+    
+    else if (spacetrigger === 3) {
+        stoptimer();
+        spacetrigger = 0;
+    }
+    
+}
 
 eventSelect.addEventListener("change", (event) => {
     generateScramble();
