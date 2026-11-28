@@ -16,6 +16,7 @@ let spacetrigger = 0;
 
 let solve1, solve2, solve3, solve4, solve5, solve6, solve7, solve8, solve9, solve10, solve11, solve12;
 let solvetracker = 0;
+let dnftracker = 0;
 let ao5 = 0;
 let ao12 = 0;
 
@@ -235,6 +236,60 @@ function stoptimer() {
 
     generateScramble(); 
 }
+
+function plustwo() {
+    const penalizedTime = time + 2;
+    const formattedTime = penalizedTime.toFixed(2);
+    const timertext = document.getElementById("timertext"); 
+
+    document.getElementById(`time${solvetracker}`).innerHTML = `${formattedTime}+`;
+    document.getElementById(`cube${solvetracker}`).innerHTML = maincube.value; 
+
+    switch (solvetracker) {
+        case 1: solve1 = penalizedTime; break;
+        case 2: solve2 = penalizedTime; break;
+        case 3: solve3 = penalizedTime; break;
+        case 4: solve4 = penalizedTime; break;
+        case 5: solve5 = penalizedTime; break;
+        case 6: solve6 = penalizedTime; break;
+        case 7: solve7 = penalizedTime; break;
+        case 8: solve8 = penalizedTime; break;       
+        case 9: solve9 = penalizedTime; break;
+        case 10: solve10 = penalizedTime; break;
+        case 11: solve11 = penalizedTime; break;
+        case 12: solve12 = penalizedTime; break;
+    }
+
+    timertext.innerHTML = `${formattedTime}+`;
+    timertext.style.color = "red";
+}
+function dnf() {
+    const timertext = document.getElementById("timertext"); 
+
+    // Display "DNF" in the solve table instead of `${formattedTime}+`
+    document.getElementById(`time${solvetracker}`).innerHTML = "DNF";
+    document.getElementById(`cube${solvetracker}`).innerHTML = maincube.value; 
+
+    switch (solvetracker) {
+        case 1: solve1 = 0; break;
+        case 2: solve2 = 0; break;
+        case 3: solve3 = 0; break;
+        case 4: solve4 = 0; break;
+        case 5: solve5 = 0; break;
+        case 6: solve6 = 0; break;
+        case 7: solve7 = 0; break;
+        case 8: solve8 = 0; break;       
+        case 9: solve9 = 0; break;
+        case 10: solve10 = 0; break;
+        case 11: solve11 = 0; break;
+        case 12: solve12 = 0; break;
+    }
+
+    timertext.innerHTML = "DNF";
+    timertext.style.color = "yellow";
+}
+
+
 
 window.addEventListener('keydown', (event) => {
     if (event.code === 'Space') {

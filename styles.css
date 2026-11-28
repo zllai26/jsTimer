@@ -205,3 +205,35 @@ body {
     font-weight: bold;
     transition: background-color 0.2s ease;
 }
+
+#dnfbutton {
+    background-color: #ae0505;
+    color: white;
+    border-radius: 6px;
+    width: 180px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+#dnfbutton:hover {
+    background-color: #770303;
+}
+
+#plustwobutton {
+    background-color: #ae0505;
+    color: white;
+    border-radius: 6px;
+    width: 180px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+#plustwobutton:hover {
+    background-color: #770303;
+}
