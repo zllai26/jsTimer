@@ -2,7 +2,7 @@
 
 A no-nonsense, minimalist cube timer built with vanilla JavaScript, HTML and CSS.
 
-![jsTimer screenshot](images/jstimer1.png)
+![jsTimer screenshot](images/jstimer.png)
 
 ## Features
 
